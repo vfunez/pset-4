@@ -1,18 +1,18 @@
 const readlineSync = require("readline-sync");
 
-const userLowerBound = readlineSync.question("\nLower bound: ");
-const userUpperBound = readlineSync.question("Upper bound: ");
+const userLowerBound = Number(readlineSync.question("\nLower bound: "));
+const userUpperBound = Number(readlineSync.question("Upper bound: "));
 
 let lowerBound = userLowerBound;
 let upperBound = userUpperBound;
-while (lowerBound > upperBound) {
-    lowerBound = readlineSync.question("Lower bound: ");
-    lowerBound = readlineSync.question("Upper bound: ");
+while (lowerBound > upperBound) && (lowerBound < Number.MIN_SAFE_INTEGER) && (lowerBound > Number.MAX_SAFE_INTEGER) && (upperBound < Number.MIN_SAFE_INTEGER) && (upperBound > Number.MAX_SAFE_INTEGER);{
+    lowerBound = Number(readlineSync.question("Lower bound: "));
+    lowerBound = Number(readlineSync.question("Upper bound: "));
 
     if (lowerBound < upperBound) {
-        n = (upperBound - lowerBound) + 1
-        sum = (n / 2)(lowerBound + upperBound)
+        let n = (upperBound - lowerBound) + 1
+        let sum = (n / 2)(lowerBound + upperBound)
     }
 }
 
-console.log(sum);
+console.log("\n" + sum + "\n");
