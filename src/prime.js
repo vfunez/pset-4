@@ -18,17 +18,9 @@ for (let i = 2; (i * i) < nonNegativeInteger; i++) {
     isPrime = true;
   }
 }
-// while (nonNegativeInteger > 0||
-//       nonNegativeInteger < Number.MAX_SAFE_INTEGER) {
-//         let valueOne = (nonNegativeInteger - 1);
-//         let valueTwo = (-1 % nonNegativeInteger);
-// }
 if (isPrime){
-        console.log("Prime");
+        console.log("\nPrime.\n");
 
 } else {
-        console.log("Not prime.");
-
+        console.log("\nNot prime.\n");
 }
-
-//WORK ON THIS AT HOME
