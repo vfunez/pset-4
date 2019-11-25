@@ -8,7 +8,9 @@ let print = "";
 console.log();
 
 while (height < 1||
-       height > 24) {
+       height > 24 ||
+       !Number.isInteger(height)||
+        Number.isNaN(height)){
 
     height = Number(readlineSync.question("Height: "));
 }

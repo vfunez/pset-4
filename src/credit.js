@@ -17,7 +17,7 @@ console.log();
   do {
     creditCardNumber = Number(readlineSync.question("Number: "));
 }
-  while (creditCardNumber < MIN || creditCardNumber > MAX);
+  while (creditCardNumber < MIN || creditCardNumber > MAX || !Number.isInteger(creditCardNumber)|| Number.isNaN(creditCardNumber));
     creditCardNumberTwo = creditCardNumber;
 
   while (creditCardNumberTwo >= 1) {

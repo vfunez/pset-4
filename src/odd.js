@@ -9,7 +9,9 @@ let print = 0;
 console.log();
 
 while (positiveInteger < MIN ||
-       positiveInteger > MAX) {
+       positiveInteger > MAX ||
+       !Number.isInteger(positiveInteger)||
+        Number.isNaN(positiveInteger)){
 
     positiveInteger = Number(readlineSync.question("Positive integer: "));
 }

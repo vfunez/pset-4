@@ -6,7 +6,9 @@ let print = 0;
 console.log();
 
 while (positiveInteger > Number.MAX_SAFE_INTEGER ||
-       positiveInteger < 1) {
+       positiveInteger < 1 ||
+       !Number.isInteger(positiveInteger)||
+        Number.isNaN(positiveInteger)){
 
     positiveInteger = Number(readlineSync.question("Positive integer: "));
 }

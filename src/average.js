@@ -7,7 +7,7 @@ let a = 0;
 console.log();
 
 while (nonNegativeInteger > 0 ||
-       nonNegativeInteger > Number.MAX_SAFE_INTEGER) {
+       nonNegativeInteger > Number.MAX_SAFE_INTEGER){
 
     nonNegativeInteger = Number(readlineSync.question("Non-negative integer: "));
 

@@ -8,8 +8,12 @@ console.log();
 while (lowerBound > upperBound ||
        lowerBound < Number.MIN_SAFE_INTEGER ||
        lowerBound > Number.MAX_SAFE_INTEGER ||
+       !Number.isInteger(lowerBound)||
+        Number.isNaN(lowerBound) ||
        upperBound < Number.MIN_SAFE_INTEGER ||
-       upperBound > Number.MAX_SAFE_INTEGER) {
+       upperBound > Number.MAX_SAFE_INTEGER ||
+       !Number.isInteger(upperBound)||
+        Number.isNaN(upperBound)){
 
     lowerBound = Number(readlineSync.question("Lower bound: "));
     upperBound = Number(readlineSync.question("Upper bound: "));

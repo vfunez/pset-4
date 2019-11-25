@@ -8,7 +8,9 @@ let c = 1;
 console.log();
 
 while (positiveInteger < 1||
-       positiveInteger > 78) {
+       positiveInteger > 78 ||
+       !Number.isInteger(positiveInteger)||
+        Number.isNaN(positiveInteger)){
 
     positiveInteger = Number(readlineSync.question("Positive integer: "));
 }
